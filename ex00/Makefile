@@ -1,14 +1,13 @@
 # === Variables ===
 
 # The name of the executable
-NAME = fixed
+NAME = clapTrap
 
 # The compiler
 CC = c++
 
 # Compiler flags as per the subject requirements
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
-# -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # === Directories ===
 
@@ -21,11 +20,11 @@ OBJ_DIR = obj
 # === Files ===
 
 # List of all source (.cpp) files
-SRCS = main.cpp Fixed.cpp
+SRCS = main.cpp ClapTrap.cpp
 
 
 # List of all header (.hpp) files for dependency tracking
-HEADERS = Fixed.hpp \
+HEADERS = ClapTrap.hpp \
 
 
 # Generate the list of object files from the source files

@@ -6,9 +6,9 @@
 class ClapTrap {
   private:
     std::string name;
-    int hitPoints;
-    int attackDamage;
-    int energyPoints;
+    unsigned int hitPoints;
+    unsigned int attackDamage;
+    unsigned int energyPoints;
 
   public:
     // Orthodox Canonical Form
@@ -18,7 +18,7 @@ class ClapTrap {
     ~ClapTrap(void);
 
     // Other methods
-    ClapTrap(std::string name);
+    ClapTrap(std::string const &name);
     void attack(const std::string &target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
