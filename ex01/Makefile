@@ -1,7 +1,7 @@
 # === Variables ===
 
 # The name of the executable
-NAME = clapTrap
+NAME = scavTrap
 
 # The compiler
 CC = c++
@@ -20,11 +20,11 @@ OBJ_DIR = obj
 # === Files ===
 
 # List of all source (.cpp) files
-SRCS = main.cpp ClapTrap.cpp
+SRCS = main.cpp ScavTrap.cpp ClapTrap.cpp
 
 
 # List of all header (.hpp) files for dependency tracking
-HEADERS = ClapTrap.hpp \
+HEADERS = ClapTrap.hpp ScavTrap.hpp \
 
 
 # Generate the list of object files from the source files
