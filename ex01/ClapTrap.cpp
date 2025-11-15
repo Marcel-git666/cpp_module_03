@@ -26,6 +26,14 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &other) {
 
 ClapTrap::~ClapTrap(void) { std::cout << "ClapTrap destructor called\n"; }
 
+// protected ctor
+
+ClapTrap::ClapTrap(std::string const &name, unsigned int hp, unsigned int ad,
+                   unsigned int ep)
+    : name(name), hitPoints(hp), attackDamage(ad), energyPoints(ep) {
+    std::cout << "ClapTrap protected constructor called\n";
+}
+
 // Other methods
 ClapTrap::ClapTrap(std::string const &name)
     : name(name), hitPoints(10), attackDamage(0), energyPoints(10) {

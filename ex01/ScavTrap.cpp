@@ -24,10 +24,7 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &other) {
 ScavTrap::~ScavTrap(void) { std::cout << "ScavTrap destructor called\n"; }
 
 // Other methods
-ScavTrap::ScavTrap(std::string const &name) : ClapTrap(name) {
-    hitPoints = 100;
-    attackDamage = 20;
-    energyPoints = 50;
+ScavTrap::ScavTrap(std::string const &name) : ClapTrap(name, 100, 20, 50) {
     std::cout << "ScavTrap named constructor called\n";
 }
 

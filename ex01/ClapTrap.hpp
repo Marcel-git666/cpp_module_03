@@ -9,6 +9,8 @@ class ClapTrap {
     unsigned int hitPoints;
     unsigned int attackDamage;
     unsigned int energyPoints;
+    ClapTrap(std::string const &name, unsigned int hp, unsigned int ad,
+             unsigned int ep);
 
   public:
     // Orthodox Canonical Form
