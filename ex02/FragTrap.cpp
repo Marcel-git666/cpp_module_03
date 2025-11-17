@@ -26,7 +26,13 @@ FragTrap::FragTrap(std::string const &name) : ClapTrap(name, 100, 30, 100) {
 }
 
 void FragTrap::highFivesGuys() {
-    if (hitPoints > 0 && energyPoints > 0) {
+    if (hitPoints == 0) {
+        std::cout << "FragTrap " << name
+                  << " is disabled and isn't in a mood for high fives!\n";
+    } else if (energyPoints == 0) {
+        std::cout << "FragTrap " << name
+                  << " is out of energy and isn't in a mood for high fives!\n";
+    } else {
         std::cout << "FragTrap " << name << " would like a high five.\n";
         energyPoints--;
     }

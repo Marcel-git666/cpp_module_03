@@ -26,8 +26,13 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &other) {
 
 ClapTrap::~ClapTrap(void) { std::cout << "ClapTrap destructor called\n"; }
 
-// protected ctor
+// Public constructor
+ClapTrap::ClapTrap(std::string const &name)
+    : name(name), hitPoints(10), attackDamage(0), energyPoints(10) {
+    std::cout << "ClapTrap named constructor called\n";
+}
 
+// Protected constructor (for derived classes)
 ClapTrap::ClapTrap(std::string const &name, unsigned int hp, unsigned int ad,
                    unsigned int ep)
     : name(name), hitPoints(hp), attackDamage(ad), energyPoints(ep) {
@@ -35,11 +40,6 @@ ClapTrap::ClapTrap(std::string const &name, unsigned int hp, unsigned int ad,
 }
 
 // Other methods
-ClapTrap::ClapTrap(std::string const &name)
-    : name(name), hitPoints(10), attackDamage(0), energyPoints(10) {
-    std::cout << "ClapTrap named constructor called\n";
-}
-
 void ClapTrap::attack(const std::string &target) {
     if (hitPoints > 0 && energyPoints > 0) {
         std::cout << "ClapTrap " << name << " attacks " << target
