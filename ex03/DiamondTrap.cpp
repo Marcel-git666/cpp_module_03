@@ -19,7 +19,7 @@ DiamondTrap::DiamondTrap(DiamondTrap const &other)
 }
 
 DiamondTrap &DiamondTrap::operator=(DiamondTrap const &other) {
-    std::cout << "DiamondTrap copy asignment operator called\n";
+    std::cout << "DiamondTrap copy assignment operator called\n";
     if (this != &other) {
         ClapTrap::operator=(other);
         ScavTrap::operator=(other);

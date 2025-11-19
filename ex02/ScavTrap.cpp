@@ -11,7 +11,7 @@ ScavTrap::ScavTrap(ScavTrap const &other) : ClapTrap(other) {
 }
 
 ScavTrap &ScavTrap::operator=(ScavTrap const &other) {
-    std::cout << "ScavTrap copy asignment operator called\n";
+    std::cout << "ScavTrap copy assignment operator called\n";
     if (this != &other) {
         ClapTrap::operator=(other);
     }
